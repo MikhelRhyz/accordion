@@ -1,0 +1,138 @@
+body {
+  background-color: hsl(275, 100%, 97%);
+  font-family: "Work Sans", serif;
+  color: hsl(292, 42%, 14%);
+}
+
+.container {
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  line-height: 2rem;
+  box-shadow: 5px 5px 15px gray;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.desktop-pattern {
+  position: absolute;
+  top: -7rem;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: hsl(292, 42%, 14%);
+}
+
+a:active{
+  color:  rgb(151, 46, 191);
+}
+
+
+
+h6 {
+  padding: 1rem 0;
+  font-size: 85%;
+  font-weight: 600;
+}
+
+.q-and-a-container {
+  border-bottom: 1px solid hsl(292, 16%, 49%, 10%);
+}
+
+.question{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.plus-sign, .minus-sign{
+
+  width: 5%;
+  transform: translateY(-15%);
+  position: absolute;
+  right: 0;
+  transition: opacity 0.3 ease;
+  
+}
+
+.plus-sign{
+  display: inline-block;
+}
+
+.minus-sign{
+  display: none;
+}
+
+p{
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.collapse {
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.collapse.show {
+  height: auto;
+  opacity: 1;
+}
+
+.collapse:not(.show) {
+  height: 0;
+  opacity: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    height: 100%; /* Full viewport height */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Ensure stacked layout if needed */
+    margin: 0; /* Remove auto margin */
+    position: relative; /* Contain absolute elements */
+    max-width: 70%;
+  }
+
+  .desktop-pattern {
+    position: absolute;
+    top: 0; /* Keep it at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset its width */
+    z-index: -1; /* Push behind other elements */
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure parent containers fill viewport */
+  }
+
+  body {
+    display: flex; /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+  }
+}
+
+
