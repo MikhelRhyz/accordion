@@ -133,6 +133,22 @@ p{
     align-items: center;
     flex-direction: column; /* Stack content vertically */
   }
+
+  .container{
+    max-width: 200px;
+  }
+
+  h6{
+    font-size: 57%;
+  }
+
+  p{
+    font-size: 7px;
+  }
+
+  .attribution{
+    max-width: 50%;
+  }
 }
 
 
